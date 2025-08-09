@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Kumar Senapati - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .resume {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #2c3e50;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3498db;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .education-item, .experience-item {
+            margin-bottom: 15px;
+        }
+        
+        .degree, .position {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        
+        .institution, .company {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin: 2px 0;
+        }
+        
+        .grade, .duration {
+            color: #27ae60;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-category {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .skill-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .skill-list {
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .project {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        
+        .project-type {
+            color: #e74c3c;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .project-description {
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .work-items {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .work-items li {
+            margin-bottom: 5px;
+            padding-left: 15px;
+            position: relative;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .work-items li:before {
+            content: "•";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+        
+        .certifications {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .cert-item {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        
+        .cert-item:before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            margin-top: 2px;
+        }
+        
+        .cert-text {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.3;
+        }
+        
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .achievement {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .achievement-title {
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 5px;
+        }
+        
+        .achievement-desc {
+            color: #856404;
+            font-size: 14px;
+        }
+        
+        .hobbies {
+            text-align: center;
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .hobbies-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        .hobby-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .resume {
+                box-shadow: none;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .achievements {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="header">
+            <div class="name">ROHIT KUMAR SENAPATI</div>
+            <div class="contact">
+                <div class="contact-item">📱 +91 9171617379</div>
+                <div class="contact-item">💼 www.linkedin.com/in/rohit-kumar-senapati-</div>
+                <div class="contact-item">🐙 github.com/Rohit-Kumar-Senapati-tech</div>
+                <div class="contact-item">📍 Bhubaneswar, Odisha, India</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="degree">B.Tech in Computer Science and Engineering</div>
+                <div class="institution">Trident Academy of Technology, Patia, Bhubaneswar</div>
+                <div class="grade">CGPA: 7.74/10</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">10+2 in PCM</div>
+                <div class="institution">Greenwood Public School, Gwalior, Madhya Pradesh</div>
+                <div class="grade">Percentage: 73%</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-title">Programming Languages</div>
+                    <div class="skill-list">Python,C++</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Machine Learning</div>
+                    <div class="skill-list">scikit-learn, XGBoost</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Deep Learning</div>
+                    <div class="skill-list">TensorFlow, PyTorch, Keras</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Natural Language Processing</div>
+                    <div class="skill-list">NLTK, spaCy, Hugging Face Transformers</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Internship Experience</div>
+            <div class="experience-item">
+                <div class="position">Data Science Intern</div>
+                <div class="company">Codtech | 1 month</div>
+                <ul class="work-items">
+                    <li>Data Pipeline Development</li>
+                    <li>Deep Learning Project Implementation</li>
+                    <li>End-to-End Data Science Project</li>
+                    <li>Optimization Model Development</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Projects</div>
+            <div class="project">
+                <div class="project-title">Crop Prediction System</div>
+                <div class="project-type">Team Project</div>
+                <div class="project-description">
+                    Developed an AI-powered prediction system to help farmers make informed decisions about crop cultivation based on market flow analysis and demand forecasting.
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-title">House Renting Prediction</div>
+                <div class="project-type">Personal Project</div>
+                <div class="project-description">
+                    Built a machine learning model to predict house rental prices using various features and market data analysis.
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Certifications</div>
+            <div class="certifications">
+                <div class="cert-item">
+                    <div class="cert-text">Complete Data Science, Machine Learning, DL, NLP Bootcamp by KRISHAI Technologies Private Limited</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-text">50+ Generative AI Tools to 10x Business, Productivity, Creativity | ChatGPT, Artificial Intelligence, Prompt Engineering by Leap Year Learning</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Achievements</div>
+            <div class="achievements">
+                <div class="achievement">
+                    <div class="achievement-title">Smart India Hackathon</div>
+                    <div class="achievement-desc">Participated with 100+ attendees at TAT</div>
+                </div>
+                <div class="achievement">
+                    <div class="achievement-title">SSB Recommended</div>
+                    <div class="achievement-desc">4 times recommended</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Hobbies & Interests</div>
+            <div class="hobbies">
+                <div class="hobbies-list">
+                    <div class="hobby-item">🎵 Listening to Music</div>
+                    <div class="hobby-item">🍳 Cooking</div>
+                    <div class="hobby-item">⚽ Football</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
