@@ -34,6 +34,7 @@
             right: 0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* Added for Safari compatibility */
             z-index: 1000;
             padding: 1rem 0;
             box-shadow: 0 2px 20px rgba(0,0,0,0.1);
@@ -821,7 +822,7 @@
                     Transforming data into actionable insights through machine learning, deep learning, 
                     and advanced analytics. Passionate about solving complex problems with cutting-edge AI technologies.
                 </p>
-                <a href="https://github.com/Rohit-Kumar-Senapati-tech" target="_blank" class="btn">View My Work</a>
+                <a href="https://github.com/Rohit-Kumar-Senapati-tech" target="_blank" rel="noopener" class="btn">View My Work</a>
             </div>
         </div>
     </section>
@@ -1010,14 +1011,14 @@
     <footer class="footer">
         <div class="container">
             <div class="social-cards">
-                <a href="https://github.com/Rohit-Kumar-Senapati-tech" target="_blank" class="social-card github">
+                <a href="https://github.com/Rohit-Kumar-Senapati-tech" target="_blank" rel="noopener" class="social-card github">
                     <div class="social-card-icon"><i class="fab fa-github"></i></div>
                     <div class="social-card-content">
                         <h4>GitHub</h4>
                         <p>Explore my repositories</p>
                     </div>
                 </a>
-                <a href="https://www.linkedin.com/in/rohit-kumar-senapati-" target="_blank" class="social-card linkedin">
+                <a href="https://www.linkedin.com/in/rohit-kumar-senapati-" target="_blank" rel="noopener" class="social-card linkedin">
                     <div class="social-card-icon"><i class="fab fa-linkedin"></i></div>
                     <div class="social-card-content">
                         <h4>LinkedIn</h4>
@@ -1028,9 +1029,11 @@
             <div class="footer-content">
                 <p>&copy; 2025 Rohit Kumar Senapati. All rights reserved.</p>
                 <div class="footer-social">
-                    <a href="https://github.com/Rohit-Kumar-Senapati-tech" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/rohit-kumar-senapati" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Rohit-Kumar-Senapati-tech" target="_blank" rel="noopener" title="Visit my GitHub profile"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/rohit-kumar-senapati" target="_blank" rel="noopener" title="Connect with me on LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
     </footer>
+</body>
+</html>
