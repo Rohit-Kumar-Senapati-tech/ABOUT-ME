@@ -191,6 +191,7 @@
 
         .task-card {
             background: rgba(255,255,255,0.15);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border-radius: 15px;
             padding: 25px;
@@ -305,6 +306,7 @@
 
         .skill-category {
             background: rgba(255,255,255,0.1);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border-radius: 15px;
             padding: 25px;
@@ -398,20 +400,22 @@
         }
 
         .nav-btn {
-            background: rgba(255,255,255,0.2);
-            border: 2px solid rgba(255,255,255,0.3);
+            background: rgba(0,0,0,0.8);
+            border: 2px solid rgba(0,0,0,0.9);
             color: white;
             padding: 12px 20px;
             border-radius: 25px;
             cursor: pointer;
             font-size: 1rem;
             transition: all 0.3s ease;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
         }
 
         .nav-btn:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(0,0,0,0.9);
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
 
         .slide-counter {
@@ -509,9 +513,35 @@
         }
 
         @media (max-width: 768px) {
+            .slide h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            .slide-1 h1 {
+                font-size: 2.8rem !important;
+            }
+            
+            .tasks-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
             .implementation-grid {
                 grid-template-columns: 1fr;
                 gap: 15px;
+            }
+            
+            .nav-buttons {
+                bottom: 20px;
+            }
+            
+            .slide {
+                padding: 20px;
             }
         }
     </style>
@@ -797,7 +827,7 @@
         <!-- Slide 9: Learning Outcomes -->
         <div class="slide slide-9">
             <div class="outcomes-container">
-                <h1 style="text-align: center; margin-bottom: 40px; color: #667eea;">Key Learning Outcomes</h1>
+                <h1>Key Learning Outcomes</h1>
                 
                 <div class="outcome-item">
                     <div class="outcome-icon">🚀</div>
@@ -899,16 +929,6 @@
         // Initialize
         document.getElementById('total-slides').textContent = totalSlides;
         showSlide(1);
-
-        // Auto-advance for demo (remove if not needed)
-        // setInterval(() => {
-        //     if (currentSlide < totalSlides) {
-        //         nextSlide();
-        //     } else {
-        //         currentSlide = 1;
-        //         showSlide(1);
-        //     }
-        // }, 10000);
     </script>
 </body>
 </html>
